@@ -1,0 +1,409 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Share+Tech+Mono);
+
+body{
+	background:#2c3e50;color:white;
+	font-family: 'Open Sans', sans-serif;
+	padding:0; margin:0; border:0;
+}
+
+h1{
+	font-family: 'Share Tech Mono', monospace;
+}
+
+.glitch {
+  color: white;
+  position: relative;
+  margin: 0 auto;
+}
+
+
+@keyframes noise-anim {
+  0% {
+    clip: rect(297px, 9999px, 103px, 0);
+  }
+  5% {
+    clip: rect(157px, 9999px, 33px, 0);
+  }
+  10% {
+    clip: rect(21px, 9999px, 211px, 0);
+  }
+  15% {
+    clip: rect(284px, 9999px, 73px, 0);
+  }
+  20% {
+    clip: rect(134px, 9999px, 224px, 0);
+  }
+  25% {
+    clip: rect(300px, 9999px, 117px, 0);
+  }
+  30% {
+    clip: rect(101px, 9999px, 104px, 0);
+  }
+  35% {
+    clip: rect(233px, 9999px, 9px, 0);
+  }
+  40% {
+    clip: rect(220px, 9999px, 229px, 0);
+  }
+  45% {
+    clip: rect(38px, 9999px, 86px, 0);
+  }
+  50% {
+    clip: rect(101px, 9999px, 194px, 0);
+  }
+  55% {
+    clip: rect(119px, 9999px, 21px, 0);
+  }
+  60% {
+    clip: rect(184px, 9999px, 82px, 0);
+  }
+  65% {
+    clip: rect(59px, 9999px, 284px, 0);
+  }
+  70% {
+    clip: rect(174px, 9999px, 85px, 0);
+  }
+  75% {
+    clip: rect(237px, 9999px, 241px, 0);
+  }
+  80% {
+    clip: rect(124px, 9999px, 248px, 0);
+  }
+  85% {
+    clip: rect(103px, 9999px, 185px, 0);
+  }
+  90% {
+    clip: rect(169px, 9999px, 29px, 0);
+  }
+  95% {
+    clip: rect(107px, 9999px, 13px, 0);
+  }
+  100% {
+    clip: rect(176px, 9999px, 196px, 0);
+  }
+}
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;background-image:linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("https://static.pexels.com/photos/1944/lights-abstract-curves-long-exposure.jpg");
+	background-size:cover; background-position:center; background-attachment:fixed;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 7s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(189px, 9999px, 145px, 0);
+  }
+  5% {
+    clip: rect(181px, 9999px, 86px, 0);
+  }
+  10% {
+    clip: rect(163px, 9999px, 157px, 0);
+  }
+  15% {
+    clip: rect(82px, 9999px, 238px, 0);
+  }
+  20% {
+    clip: rect(227px, 9999px, 230px, 0);
+  }
+  25% {
+    clip: rect(11px, 9999px, 138px, 0);
+  }
+  30% {
+    clip: rect(271px, 9999px, 185px, 0);
+  }
+  35% {
+    clip: rect(65px, 9999px, 2px, 0);
+  }
+  40% {
+    clip: rect(20px, 9999px, 140px, 0);
+  }
+  45% {
+    clip: rect(256px, 9999px, 249px, 0);
+  }
+  50% {
+    clip: rect(203px, 9999px, 38px, 0);
+  }
+  55% {
+    clip: rect(87px, 9999px, 66px, 0);
+  }
+  60% {
+    clip: rect(213px, 9999px, 12px, 0);
+  }
+  65% {
+    clip: rect(276px, 9999px, 125px, 0);
+  }
+  70% {
+    clip: rect(152px, 9999px, 68px, 0);
+  }
+  75% {
+    clip: rect(232px, 9999px, 64px, 0);
+  }
+  80% {
+    clip: rect(178px, 9999px, 290px, 0);
+  }
+  85% {
+    clip: rect(10px, 9999px, 207px, 0);
+  }
+  90% {
+    clip: rect(131px, 9999px, 234px, 0);
+  }
+  95% {
+    clip: rect(207px, 9999px, 211px, 0);
+  }
+  100% {
+    clip: rect(201px, 9999px, 102px, 0);
+  }
+}
+.glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;background-image:linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("https://static.pexels.com/photos/1944/lights-abstract-curves-long-exposure.jpg");
+	background-size:cover; background-position:center; background-attachment:fixed;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 10s infinite linear alternate-reverse;
+}
+
+
+
+
+
+
+header{
+	width:100%;
+	text-align:center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position:relative;
+}
+
+.HomeHead{
+	height:100vh;
+	background-image:linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("https://static.pexels.com/photos/1944/lights-abstract-curves-long-exposure.jpg");
+	background-size:cover; background-position:center; background-attachment:fixed;
+}
+.HomeHead h1{
+	font-size:1000%;
+	display:inline-block;
+}
+
+
+
+header nav{
+	position:absolute;
+	right:0; bottom:0;
+}
+
+header a{
+	vertical-align:bottom;
+	color:white; text-decoration:none;
+	display:inline-block;
+	position:relative;
+	overflow-y:hidden;
+	padding: 20px 30px;
+	transition: background 0.2s ease;
+	background:none;
+}
+header nav ul{
+	list-style-type: none;
+	padding:0; margin:0; border:0;
+}
+header nav li{
+	margin:0; 
+	display:inline-block; position:relative;
+	overflow-y:hidden;
+	vertical-align:bottom;
+}
+
+header nav li::before{
+	background:#2c3e50;
+	content:''; display:block; position:absolute;
+	width:100%; height:100%; left:0; top:100%;
+	z-index:0;
+	transition:top 0.5s ease;
+}
+header nav li:hover::before{
+	top:0;
+}
+
+header nav a:active{
+	background:black;
+}
+
+header .CurrPage{
+	background:#2c3e50; color:white;
+}
+
+
+
+
+
+@keyframes noise-anim3 {
+  0% {
+    clip: rect(3px, 9999px, 6px, 0);
+  }
+  5% {
+    clip: rect(3px, 9999px, 19px, 0);
+  }
+  10% {
+    clip: rect(15px, 9999px, 6px, 0);
+  }
+  15% {
+    clip: rect(3px, 9999px, 10px, 0);
+  }
+  20% {
+    clip: rect(11px, 9999px, 18px, 0);
+  }
+  25% {
+    clip: rect(6px, 9999px, 3px, 0);
+  }
+  30% {
+    clip: rect(8px, 9999px, 6px, 0);
+  }
+  35% {
+    clip: rect(11px, 9999px, 1px, 0);
+  }
+  40% {
+    clip: rect(19px, 9999px, 16px, 0);
+  }
+  45% {
+    clip: rect(5px, 9999px, 18px, 0);
+  }
+  50% {
+    clip: rect(17px, 9999px, 20px, 0);
+  }
+  55% {
+    clip: rect(20px, 9999px, 17px, 0);
+  }
+  60% {
+    clip: rect(20px, 9999px, 20px, 0);
+  }
+  65% {
+    clip: rect(10px, 9999px, 11px, 0);
+  }
+  70% {
+    clip: rect(19px, 9999px, 7px, 0);
+  }
+  75% {
+    clip: rect(4px, 9999px, 6px, 0);
+  }
+  80% {
+    clip: rect(16px, 9999px, 19px, 0);
+  }
+  85% {
+    clip: rect(3px, 9999px, 4px, 0);
+  }
+  90% {
+    clip: rect(11px, 9999px, 4px, 0);
+  }
+  95% {
+    clip: rect(1px, 9999px, 3px, 0);
+  }
+  100% {
+    clip: rect(12px, 9999px, 8px, 0);
+  }
+}
+header nav a:hover::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 30.5px;
+  text-shadow: -1px 0 red;
+  top: 20px;
+  color: white;
+  background: #2c3e50;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim3 7s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim4 {
+  0% {
+    clip: rect(12px, 9999px, 20px, 0);
+  }
+  5% {
+    clip: rect(19px, 9999px, 16px, 0);
+  }
+  10% {
+    clip: rect(19px, 9999px, 18px, 0);
+  }
+  15% {
+    clip: rect(16px, 9999px, 17px, 0);
+  }
+  20% {
+    clip: rect(20px, 9999px, 12px, 0);
+  }
+  25% {
+    clip: rect(20px, 9999px, 8px, 0);
+  }
+  30% {
+    clip: rect(15px, 9999px, 14px, 0);
+  }
+  35% {
+    clip: rect(8px, 9999px, 5px, 0);
+  }
+  40% {
+    clip: rect(18px, 9999px, 3px, 0);
+  }
+  45% {
+    clip: rect(17px, 9999px, 11px, 0);
+  }
+  50% {
+    clip: rect(9px, 9999px, 18px, 0);
+  }
+  55% {
+    clip: rect(10px, 9999px, 17px, 0);
+  }
+  60% {
+    clip: rect(1px, 9999px, 18px, 0);
+  }
+  65% {
+    clip: rect(12px, 9999px, 16px, 0);
+  }
+  70% {
+    clip: rect(11px, 9999px, 19px, 0);
+  }
+  75% {
+    clip: rect(19px, 9999px, 7px, 0);
+  }
+  80% {
+    clip: rect(1px, 9999px, 11px, 0);
+  }
+  85% {
+    clip: rect(14px, 9999px, 14px, 0);
+  }
+  90% {
+    clip: rect(19px, 9999px, 14px, 0);
+  }
+  95% {
+    clip: rect(10px, 9999px, 5px, 0);
+  }
+  100% {
+    clip: rect(17px, 9999px, 20px, 0);
+  }
+}
+header nav a:hover::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 29px;
+  text-shadow: 1px 0 blue;
+  top: 20px;
+  color: white;
+  background: #2c3e50;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim4 3s infinite linear alternate-reverse;
+}
+
+header nav a:active::before, header nav a:active::after{
+	background:black;
+}
