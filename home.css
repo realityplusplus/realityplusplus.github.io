@@ -1,53 +1,43 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>404 - Reality++</title>
-		
-		
-		<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
-		<meta name="description" content="An exploration of the technology of augmented reality"/>
-		<meta name="author" content="AK TSA"/>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<link rel="stylesheet" type="text/css" href="/uni.css" />
-		<style>
-			.glitch::after{
-				color:#e74c3c;
-			}
-			.glitch::before{
-				color:#e74c3c;
-			}
-			h1, .glitch::after, .glitch::before{
-			 text-shadow: 
-      0 -1px 0 #c0392b, 
-      0 1px 0 #2e2e2e, 
-      0 2px 0 #2c2c2c, 
-      0 3px 0 #2a2a2a, 
-      0 4px 0 #282828, 
-      0 5px 0 #262626, 
-      0 6px 0 #242424, 
-      0 7px 0 #222, 
-      0 8px 0 #202020, 
-      0 9px 0 #1e1e1e, 
-      0 10px 0 #1c1c1c, 
-      0 11px 0 #1a1a1a, 
-      0 12px 0 #181818, 
-      0 13px 0 #161616, 
-      0 14px 0 #141414, 
-      0 15px 0 #121212, 
-      0 22px 30px rgba(0, 0, 0, 0.9);
-			}
-			
-			.HomeHead{
-				height:100vh;
-	background-image:linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("https://static.pexels.com/photos/1944/lights-abstract-curves-long-exposure.jpg");
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+
+body{
+	position:relative;
+	height:100%;
+}
+html{
+	min-height:100%;
+	position:relative;
+}
+
+
+
+.HomeHead{
+	position:relative; z-index:11;
+	
+	
+	text-align:center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow:none;
+}
+
+
+.HomeHead{
+	height:100vh;
+	position:relative;
+	background-image:linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("https://userscontent2.emaze.com/images/ac315fff-308a-4fc6-9f69-1a60c07df893/c528f93ffbd92023853c40d886232d74.jpg");
 	background-size:cover; background-position:center; background-attachment:fixed;
-			}
-			
-			
-			
-			
+	
+	z-index:3;
+}
+.HomeHead h1{
+	font-size:1000%;
+	display:inline-block;
+}
+
+
+
 @keyframes noise-anim {
   0% {
     clip: rect(297px, 9999px, 103px, 0);
@@ -117,9 +107,10 @@
   content: attr(data-text);
   position: absolute;
   left: 2px;
+  text-shadow: -1px 0 red;
   top: 0;
-	
-	background-image:linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("https://static.pexels.com/photos/1944/lights-abstract-curves-long-exposure.jpg");
+  color: white;
+	background-image:linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("https://userscontent2.emaze.com/images/ac315fff-308a-4fc6-9f69-1a60c07df893/c528f93ffbd92023853c40d886232d74.jpg");
 	background-size:cover; background-position:center; background-attachment:fixed;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
@@ -195,31 +186,64 @@
   content: attr(data-text);
   position: absolute;
   left: -2px;
+  text-shadow: 1px 0 blue;
   top: 0;
-	background-image:linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("https://static.pexels.com/photos/1944/lights-abstract-curves-long-exposure.jpg");
+  color: white;background-image:linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("https://userscontent2.emaze.com/images/ac315fff-308a-4fc6-9f69-1a60c07df893/c528f93ffbd92023853c40d886232d74.jpg");
 	background-size:cover; background-position:center; background-attachment:fixed;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim-2 10s infinite linear alternate-reverse;
 }
-		</style>
-	</head>
-	<body>
-		<header class="HomeHead">
-			<div>
-				<h1 class="glitch" data-text="404" style="font-size:1500%;color:#e74c3c;">404</h1>
-				<p>This is not the page you are looking for.</p>
-			</div>
-			<nav>
-				<ul>
-					<li><a href="/" data-text="Home">Home</a></li><!-- 		These comments are here because these  
-					--><li><a href="/hist" data-text="History">History</a></li><!--	inline elements would display space between them if
-					--><li><a href="/uses" data-text="Uses">Uses</a></li><!--	there was space between these elements
-					--><li><a href="/tech" data-text="Technology">Technology</a></li><!--
-					--><li><a href="/conc" data-text="Concerns">Concerns</a></li>
-				</ul>
-			</nav>
-		</header>
-		
-	</body>
-</html>
+
+
+
+
+
+
+
+/*
+
+
+#ExBox p{
+	margin:0; padding:50px;
+	transition: transform 1s ease-out;
+	background-size:cover;background-repeat:no-repeat;
+}
+#ExBox div:nth-child(1) p{
+	transform:perspective(10000px)rotateY(-90deg);
+	background-position:right;
+}
+#ExBox div:nth-child(2) p{
+	transform:perspective(10000px)rotateY(90deg);
+	background-position:left;
+}*/
+
+#ConsistentHeader{
+	position:fixed;
+	left:50%;
+	top:50%;
+	margin:0; text-align:center;
+	transform:translateY(-50%)translateX(-50%);
+	white-space:nowrap;
+}
+
+
+
+.StretchBG{
+	background-size:cover;
+	background-position:center;
+}
+
+.HomeContent{
+	padding:15vh 10vw;
+	position:relative;
+	background-position:center;
+	background-size:cover;
+	background-attachment:fixed;
+	box-shadow: inset 0 0 20px black;
+	margin-bottom:60vh;
+}
+
+.HomeContent p{
+	margin-right:20vw;
+}
