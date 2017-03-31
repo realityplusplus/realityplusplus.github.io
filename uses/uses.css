@@ -26,6 +26,7 @@ body{
 	transition: width 0.25s ease-out, height 0.25s ease-out, border-radius 0.25s ease-out, background-color 0.25s ease-out;
 	
 	background-color:#263238;
+	z-index:1; position:relative;
 }
 
 .Select li:hover{
@@ -70,41 +71,37 @@ body{
 
 .item {
 	position: absolute;
-	background: #000;
+	/*background: #000;*/
 	width: 80vh;
 	height: 80vh;
 	color: #FFF;
-	opacity: 0.95;
+	opacity: 0.9;
 	border-radius: 10px;
 	
 	display: flex;
 	align-items: center;
 	justify-content:center;
+	
+	background-size:cover;
 }
 
 .a {
 	transform: rotateY(0deg) translateZ(80vh);
-	background: #1A237E;
 }
 .b {
 	transform: rotateY(60deg) translateZ(80vh);
-	background: #827717;
 }
 .c {
 	transform: rotateY(120deg) translateZ(80vh);
-	background: #0D47A1;
 }
 .d {
 	transform: rotateY(180deg) translateZ(80vh);
-	background: #1B5E20;
 }
 .e {
 	transform: rotateY(240deg) translateZ(80vh);
-	background: #311B92;
 } 
 .f {
 	transform: rotateY(300deg) translateZ(80vh);
-	background: #880E4F;
 }
 /*
 .next, .prev {
@@ -133,18 +130,10 @@ body{
 	max-width:80vw;max-height:80vh;
 	text-align:left;
 	display:block;
-	padding:10px;
+	padding:0 20px;
+	background-color:rgba(66,66,66,0.8);
 }
 
 
 
 
-
-
-
-
-
-
-img{
-	max-width:15vw;float:right;
-}
