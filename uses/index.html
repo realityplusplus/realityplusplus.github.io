@@ -12,6 +12,8 @@
 		
 		<link rel="stylesheet" type="text/css" href="/uni.css" />
 		<link rel="stylesheet" type="text/css" href="uses.css" />
+		
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<header>
@@ -29,10 +31,91 @@
 			</nav>
 		</header>
 		
-		<h1>Uses</h1>
-
-		<section>
-			<p>Hi</p>
-		</section>
+		<!--h1>Uses</h1-->
+		
+		
+		<div class="container">
+			<div class="carousel">
+				<div class="item a"><div>
+					<h1>Uses</h1>
+				</div></div>
+				<div class="item b"><div>
+					<img src="/img/googleglass.png" alt="Google Glass" />
+					<h2>Headsets</h2>
+					<p>Lorem ipsum dolor sit amet sjeiojfaioieoh iosghiosahegioshiogh asioghseioghoisahgoisehgoie soigshaoigh eoihgosihgiosaehego iesahgoeishgoishoiha oigheioshgoisa hgaegagesa eggas</p>
+				</div></div>
+				<div class="item c"><div>
+					<img src="https://c1.staticflickr.com/6/5728/20841075594_b91257de92_b.jpg" alt="Snapchat Filters" />
+					<h2>Social Media</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis orci quis interdum dignissim. Cras varius lacus in nunc egestas luctus. Phasellus ultrices, tellus ut tristique convallis, purus ex iaculis orci, ut dapibus ligula erat quis nisi. Sed euismod luctus feugiat. Donec at neque in libero viverra molestie. Duis vehicula tellus velit, ut molestie odio iaculis quis. Praesent mollis ultricies placerat.</p>
+				</div></div>
+				<div class="item d"><div>
+					<!--img src="https://c1.staticflickr.com/9/8409/27972275293_6fd819aedd_b.jpg" alt="Pokemon Go" />-->
+					<img src="https://c1.staticflickr.com/8/7533/15716942894_ed8c4f2e52_b.jpg" alt="Minecraft on Microsoft Hololens" />
+					<h2>Gaming</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis orci quis interdum dignissim. Cras varius lacus in nunc egestas luctus. Phasellus ultrices, tellus ut tristique convallis, purus ex iaculis orci, ut dapibus ligula erat quis nisi. Sed euismod luctus feugiat. Donec at neque in libero viverra molestie. Duis vehicula tellus velit, ut molestie odio iaculis quis. Praesent mollis ultricies placerat.</p>
+				</div></div>
+				<div class="item e"><div>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/ViewAR_BUTLERS_Screenshot.jpg" alt="Ikea's AR app" />
+					<h2>Retail</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis orci quis interdum dignissim. Cras varius lacus in nunc egestas luctus. Phasellus ultrices, tellus ut tristique convallis, purus ex iaculis orci, ut dapibus ligula erat quis nisi. Sed euismod luctus feugiat. Donec at neque in libero viverra molestie. Duis vehicula tellus velit, ut molestie odio iaculis quis. Praesent mollis ultricies placerat.</p>
+				</div></div>
+				<div class="item f"><div>
+					<img src="https://c1.staticflickr.com/9/8743/16694809913_1808bb2d31_b.jpg" alt="Medical training on Microsoft Hololens" />
+					<h2>Medical</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis orci quis interdum dignissim. Cras varius lacus in nunc egestas luctus. Phasellus ultrices, tellus ut tristique convallis, purus ex iaculis orci, ut dapibus ligula erat quis nisi. Sed euismod luctus feugiat. Donec at neque in libero viverra molestie. Duis vehicula tellus velit, ut molestie odio iaculis quis. Praesent mollis ultricies placerat.</p>
+				</div></div>
+			</div>
+		</div>
+		
+		<ul class="Select" id="SelectList">
+			<li style="background-image:url('/img/house.png');border-top-left-radius:20px;" onclick="rotate(0);" class="CurrPage">
+			</li><!--This and chair from Pixabay--><li style="background-image:url('/img/hololens.png');" onclick="rotate(1);">
+			</li><li style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2000px-Instagram_logo_2016.svg.png');" onclick="rotate(2);">
+			</li><li style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/2000px-Pok%C3%A9_Ball_icon.svg.png');" onclick="rotate(3);">
+			</li><li style="background-image:url('/img/chair.png');" onclick="rotate(4);">
+			</li><li style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Injury_icon_2.svg/2000px-Injury_icon_2.svg.png');border-top-right-radius:20px;" onclick="rotate(5);">
+			</li>
+		</ul>
+		
+		<script>
+			var numItems = 6;
+			//var modDeg = 0;
+			
+			var carousel = $(".carousel"),
+				currdeg  = 0;
+			
+			//$(".next").on("click", { d: "n" }, rotate);
+			//$(".prev").on("click", { d: "p" }, rotate);
+			
+			function rotate(e){
+				//if(e.data.d=="n"){
+				//	currdeg--;
+				//}
+				//if(e.data.d=="p"){
+				//	currdeg++;
+				//}
+				
+				//modDeg = (currdeg + numItems) % numItems;
+				currdeg = e;
+				
+				var rotNum = (360 / numItems) * -1 * currdeg;
+				//alert(rotNum);
+				carousel.css({
+					"-webkit-transform": "rotateY("+rotNum+"deg)",
+					"-moz-transform": "rotateY("+rotNum+"deg)",
+					"-o-transform": "rotateY("+rotNum+"deg)",
+					"transform": "rotateY("+rotNum+"deg)"
+				});
+				
+				var allLists = document.getElementById("SelectList").getElementsByTagName("LI");
+				for(i = 0; i < numItems; i++){
+					if(i != e){
+						allLists[i].className = "";
+					}
+				}
+				allLists[e].className = "CurrPage";
+			}
+		</script>
 	</body>
 </html>
