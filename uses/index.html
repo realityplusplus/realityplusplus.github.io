@@ -37,7 +37,7 @@
 		<div class="container">
 			<div class="carousel">
 				<div class="item a">
-					<h1 style="background:rgba(26,35,126,0.7);">Uses</h1>
+					<h1 style="background:rgba(26,35,126,1);">Uses</h1>
 				</div>
 				<div class="item b" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/2/25/Google_Glass_Explorer_Edition.jpeg');"><div>
 					<h2>Headsets</h2>
@@ -63,17 +63,18 @@
 				</div></div>
 			</div>
 		</div>
-		
-		<ul class="Select" id="SelectList">
+		<button class="BigBtn CarBtn" onclick="rotate(true);">Back</button>
+		<button class="BigBtn CarBtn NextCar" onclick="rotate(false);">Next</button>
+		<!--ul class="Select" id="SelectList">
 			<p style="margin:0;position:absolute; bottom:75px;width:100%;z-index:0;" id="DumbInd">&#x25BC; Click to learn more &#x25BC;</p>
 			<li style="background-image:url('/img/house.png');border-top-left-radius:20px;" onclick="rotate(0);" class="CurrPage">
-			</li><!--This and chair from Pixabay--><li style="background-image:url('/img/hololens.png');" onclick="rotate(1);">
+			</li><!--This and chair from Pixabay--<li style="background-image:url('/img/hololens.png');" onclick="rotate(1);">
 			</li><li style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2000px-Instagram_logo_2016.svg.png');" onclick="rotate(2);">
 			</li><li style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/2000px-Pok%C3%A9_Ball_icon.svg.png');" onclick="rotate(3);">
 			</li><li style="background-image:url('/img/chair.png');" onclick="rotate(4);">
 			</li><li style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/American_Football_1.svg/1280px-American_Football_1.svg.png');border-top-right-radius:20px;" onclick="rotate(5);">
 			</li>
-		</ul>
+		</ul-->
 		
 		<script>
 			var numItems = 6;
@@ -86,16 +87,15 @@
 			//$(".prev").on("click", { d: "p" }, rotate);
 			
 			function rotate(e){
-				document.getElementById("DumbInd").style.display = "none";
-				//if(e.data.d=="n"){
-				//	currdeg--;
-				//}
-				//if(e.data.d=="p"){
-				//	currdeg++;
-				//}
+				//document.getElementById("DumbInd").style.display = "none";
+				if(e){
+					currdeg--;
+				} else{
+					currdeg++;
+				}
 				
 				//modDeg = (currdeg + numItems) % numItems;
-				currdeg = e;
+				//currdeg = e;
 				
 				var rotNum = (360 / numItems) * -1 * currdeg;
 				//alert(rotNum);
@@ -106,13 +106,13 @@
 					"transform": "rotateY("+rotNum+"deg)"
 				});
 				
-				var allLists = document.getElementById("SelectList").getElementsByTagName("LI");
+				/*var allLists = document.getElementById("SelectList").getElementsByTagName("LI");
 				for(i = 0; i < numItems; i++){
 					if(i != e){
 						allLists[i].className = "";
 					}
 				}
-				allLists[e].className = "CurrPage";
+				allLists[e].className = "CurrPage";*/
 			}
 		</script>
 	</body>

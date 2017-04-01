@@ -136,4 +136,13 @@ body{
 
 
 
+.CarBtn{
+	position:fixed; top:50vh;
+}
+
+.NextCar{
+	right:0;
+}
+
+
 
