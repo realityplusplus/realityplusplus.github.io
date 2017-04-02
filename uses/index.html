@@ -120,6 +120,20 @@
 				}
 				allLists[e].className = "CurrPage";*/
 			}
+			
+			
+			
+			document.addEventListener("keydown", function (e){
+				var keyCode = ('which' in event) ? event.which : event.keyCode;
+            //alert ("The Unicode key code is: " + keyCode);
+				if(keyCode == 37){
+					//Left
+					rotate(true);
+				} else if(keyCode == 39){
+					//Right
+					rotate(false);
+				}
+			})
 		</script>
 	</body>
 </html>
