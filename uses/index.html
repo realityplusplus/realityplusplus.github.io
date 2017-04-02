@@ -15,7 +15,7 @@
 		
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
 	</head>
-	<body>
+	<body onload="spinCar();">
 		<header>
 			
 				<h1><a href="/">Reality++</a></h1>
@@ -85,12 +85,13 @@
 			
 			//$(".next").on("click", { d: "n" }, rotate);
 			//$(".prev").on("click", { d: "p" }, rotate);
-			
-			carousel.css({"-webkit-transform": "rotateY(0deg)",
+			function spinCar(){
+				carousel.css({"-webkit-transform": "rotateY(0deg)",
 					"-moz-transform": "rotateY(0deg)",
 					"-o-transform": "rotateY(0deg)",
 					"transform": "rotateY(0deg)"});
-			
+			}
+				
 			function rotate(e){
 				//document.getElementById("DumbInd").style.display = "none";
 				carousel.css({"transition": "transform 1s"});
