@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Technology - Reality++</title>
+		
+		
+		<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+		<meta name="description" content="An exploration of the technology of augmented reality"/>
+		<meta name="author" content="AK TSA"/>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" type="text/css" href="/uni.css" />
+		<link rel="stylesheet" type="text/css" href="tech.css" />
+		
+		<script src="http://cleantech4us.github.io/JSDep/skrollr.min.js"></script>
+	</head>
+	<body>
+		<!-- Preloader -->
+		<div id="preloader">
+		    <div id="status">
+				<p>Patience, please<br />This one's big</p>
+				<p>It'll be worth it. We promise.</p>
+				<p><progress id="status2" max="346" value="0"></progress></p>
+				
+				<p id="slowConnect" style="position:relative;display:none;z-index:999999;">Slow connection? Try the compressed version <a href="loadtest.html">here</a>.<br />Warning: may be weird and buggy.</p>
+			</div>
+			
+		</div>
+		
+		
+		
+		<header>
+			
+			<h1><a href="/">Reality++</a></h1>
+			
+			<nav>
+				<ul>
+					<li><a href="/" data-text="Home">Home</a></li><!-- 
+					--><li><a href="/hist" data-text="History">History</a></li><!--
+					--><li><a href="/uses" data-text="Uses">Uses</a></li><!--
+					--><li><a href="#" class="CurrPage">Technology</a></li><!--
+					--><li><a href="/conc" data-text="Concerns">Concerns</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		
+		
+		
+		<div id="Card1" class="Card" data-0="opacity:1;" data-500="opacity:0;">
+			<h1 style="margin:0;">Technology</h1>
+			<h2 style="margin:0;text-align:center;">Anatomy of an AR Headset</h2>
+		</div>
+		
+		
+		<div class="Card" id="Card2" data-4000="opacity:0;" data-4300="opacity:1;" data-5300="opacity:1;" data-5600="opacity:0;">
+			<h2>Frame</h2>
+			<p>Blades provide the drone with the power of flight. Blades can be built from a multitude of materials that include plastics, a fiber-reinforced polymer (carbon fiber), or natural wood. The plastic blades are generally used for consumer entertainment drones, the carbon fiber blades for industrial purposes, and the natural wood blades for science and technology projects such as RC planes.</p>
+		</div>
+		
+		<div class="Card" id="Card3" data-6000="opacity:0;" data-6300="opacity:1;" data-7300="opacity:1;" data-7600="opacity:0;">
+			<h2>Onboard Computer</h2>
+			<p>Blades provide the drone with the power of flight. Blades can be built from a multitude of materials that include plastics, a fiber-reinforced polymer (carbon fiber), or natural wood. The plastic blades are generally used for consumer entertainment drones, the carbon fiber blades for industrial purposes, and the natural wood blades for science and technology projects such as RC planes.</p>
+		</div>
+		
+		<div class="Card" id="Card4" data-8000="opacity:0;" data-8300="opacity:1;" data-8300="opacity:1;" data-8600="opacity:0;">
+			<h2>Projector</h2>
+			<p>Blades provide the drone with the power of flight. Blades can be built from a multitude of materials that include plastics, a fiber-reinforced polymer (carbon fiber), or natural wood. The plastic blades are generally used for consumer entertainment drones, the carbon fiber blades for industrial purposes, and the natural wood blades for science and technology projects such as RC planes.</p>
+		</div>
+		
+		
+		<div class="Card" id="Card5" data-9000="opacity:0;" data-9300="opacity:1;" data-10300="opacity:1;" data-10600="opacity:0;">
+			<h2>Display</h2>
+			<p>Blades provide the drone with the power of flight. Blades can be built from a multitude of materials that include plastics, a fiber-reinforced polymer (carbon fiber), or natural wood. The plastic blades are generally used for consumer entertainment drones, the carbon fiber blades for industrial purposes, and the natural wood blades for science and technology projects such as RC planes.</p>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		<div id="set-height"></div>
+		<p id="time"></p>
+		<img src="video/Lens_00000.png" id="v1" alt="A video of a Google Glass" />
+		
+		<script>
+			
+			
+			//
+			//	SKROLLR
+			//
+			var s = skrollr.init();
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			// select video element
+			var vid = document.getElementById('v1');
+			//var vid = $('#v0')[0]; // jquery option
+			
+			// refresh video frames on interval for smoother playback
+			setInterval(function(){
+				//vid.currentTime = window.pageYOffset/400;
+				vid.src = "video/Lens_" + pad(Math.round(s.getScrollTop() / 30), 5) + ".png";//window.pageYOffset / 16), 3) + ".png";
+			}, 100);
+			
+			
+			
+			
+			function pad(num, size) {
+				if(num > 346){return "00346";} // Quick Hack - CHANGE TO REFLECT NUM OF FRAMES
+				
+				var s = num+"";
+				while (s.length < size) s = "0" + s;
+				return s;
+			}
+			
+			
+			
+			
+			
+			
+			
+			//
+			//IMAGE PRELOADING CRAP
+			//
+			function preloadImages1(){
+				//if(document.getElementById("navLink1").getElementsByTagName("SPAN")[0]){
+					console.log("Begin Preloading Images")
+					actuallyLoadThem1();
+				//} else{
+				///	setTimeout(preloadImages1, 1000);
+				//}
+			}
+			function actuallyLoadThem1(){
+				var images = new Array()
+				console.log("WARNING About to dump massive stuff to console");
+	
+				for(i = 0; i <= 540; i++) {
+					images[i] = new Image()
+					images[i].src = "video/Lens_" + pad(i, 5) + ".png";
+					console.log("Loaded " + i + " of 346 images");
+				}
+				
+				var loadBar = document.getElementById("status2");
+				images[1].onload   = function(){loadBar.value = 1;};
+				images[50].onload  = function(){loadBar.value = 50;};
+				images[100].onload = function(){loadBar.value = 100;};
+				images[150].onload = function(){loadBar.value = 150;};
+				images[200].onload = function(){loadBar.value = 200;};
+				images[250].onload = function(){loadBar.value = 250;};
+				images[300].onload = function(){loadBar.value = 300;};
+				images[346].onload = function(){
+					loadBar.value = 346;
+					document.getElementById("preloader").style.display = "none";
+					document.getElementsByTagName("BODY")[0].style.overflow = "visible";
+				};
+			}
+			preloadImages1();
+		</script>
+	</body>
+</html>

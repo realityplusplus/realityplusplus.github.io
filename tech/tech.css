@@ -1,0 +1,120 @@
+body{
+	min-height:0 !important;
+	background:rgb(0,9,173);
+}
+
+#set-height {
+  display: block;
+  height: 11000px;
+}
+
+
+
+
+
+#v1 {
+  position: fixed;
+  top:118px;
+  left: 50%;
+  height: calc(100% - 118px);
+  transform:translateX(-50%);
+}
+
+
+
+
+
+
+.Card{
+	position:fixed !important;
+	z-index:9;
+	background:rgba(44, 62, 80,0.9);
+	padding:5px;
+}
+
+#Card1{
+	bottom:10%;
+	left:50%;
+	transform:translateX(-50%);
+	padding: 2vw;
+	color:white;
+}
+#Card2{
+	bottom:30%;
+	left:5vw;
+	max-width:40%;
+}
+#Card3{
+	right:5%;
+	bottom: 30%;
+	max-width:40%;
+}
+#Card4{
+	left:10%;
+	top:40%;
+	max-width:40%;
+}
+#Card5{
+	right:10%;
+	bottom:10%;
+	max-width:40%;
+}
+#Card6{
+	top:20%;
+	left:50%;
+	max-width:40%;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+body {
+    /*overflow: hidden;
+	/*
+									THIS IS WHAT I CHANGED
+									CHANGE IT BACK IF NECESSARY
+	
+	
+}*/
+
+/* Preloader */
+
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#fff; /* change if the mask should have another color then white */
+    z-index:99; /* makes sure it stays on top */
+	color:black;
+		
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+#status {
+    width:200px;
+	
+    position:absolute;
+    left:50%; /* centers the loading animation horizontally one the screen */
+    top:50%; /* centers the loading animation vertically one the screen */
+    /*background-image:url("http://cleantech4us.github.io/JSDep/preload/img/status.gif"); /* path to your loading animation */
+    background-repeat:no-repeat;
+    background-position:center;
+    margin:-100px 0 0 -100px; /* is width and height divided by two */
+    
+    text-align:center;
+	
+	z-index:999;
+
+}
