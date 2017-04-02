@@ -1,7 +1,7 @@
 body{
 	overflow-y:hidden;
 }
-
+/*
 .Select{
 	margin:0; padding:0; 
 	list-style-type:none;
@@ -14,7 +14,7 @@ body{
 	width:75px;height:75px;
 	margin:0;
 	
-	/*border: 1px solid ;*/
+
 	vertical-align:bottom;
 	border-radius:0px;
 	
@@ -38,7 +38,7 @@ body{
 
 .Select .CurrPage, .Select li:active{
 	background-color:#37474F;
-}
+}*/
 
 
 .item h1{
@@ -66,7 +66,8 @@ body{
 	width: 100%;
 	position: absolute;
 	transform-style: preserve-3d;
-	transition: transform 1s;
+	transform:rotateY(360deg);
+	transition: transform 3s;
 }
 
 .item {
@@ -75,7 +76,6 @@ body{
 	width: 80vh;
 	height: 80vh;
 	color: #FFF;
-	opacity: 0.9;
 	border-radius: 10px;
 	
 	display: flex;
@@ -83,6 +83,9 @@ body{
 	justify-content:center;
 	
 	background-size:cover;
+	
+	
+	opacity:0.95;
 }
 
 .a {
@@ -138,10 +141,13 @@ body{
 
 .CarBtn{
 	position:fixed; top:50vh;
+	left:10px;
+	font-size:200%;
 }
 
 .NextCar{
-	right:0;
+	left:initial;
+	right:10px;
 }
 
 

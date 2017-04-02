@@ -63,8 +63,8 @@
 				</div></div>
 			</div>
 		</div>
-		<button class="BigBtn CarBtn" onclick="rotate(true);">Back</button>
-		<button class="BigBtn CarBtn NextCar" onclick="rotate(false);">Next</button>
+		<button class="BigBtn CarBtn" onclick="rotate(true);">&lsaquo;</button>
+		<button class="BigBtn CarBtn NextCar" onclick="rotate(false);">&rsaquo;</button>
 		<!--ul class="Select" id="SelectList">
 			<p style="margin:0;position:absolute; bottom:75px;width:100%;z-index:0;" id="DumbInd">&#x25BC; Click to learn more &#x25BC;</p>
 			<li style="background-image:url('/img/house.png');border-top-left-radius:20px;" onclick="rotate(0);" class="CurrPage">
@@ -86,8 +86,14 @@
 			//$(".next").on("click", { d: "n" }, rotate);
 			//$(".prev").on("click", { d: "p" }, rotate);
 			
+			carousel.css({"-webkit-transform": "rotateY(0deg)",
+					"-moz-transform": "rotateY(0deg)",
+					"-o-transform": "rotateY(0deg)",
+					"transform": "rotateY(0deg)"});
+			
 			function rotate(e){
 				//document.getElementById("DumbInd").style.display = "none";
+				carousel.css({"transition": "transform 1s"});
 				if(e){
 					currdeg--;
 				} else{
