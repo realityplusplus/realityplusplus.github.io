@@ -60,6 +60,9 @@ body,html{
 	perspective: 500vh;
 	
 	padding-top:calc(10vh + 50px);
+	
+	transform:scale(0);
+	transition:transform 3s ease-out;
 }
 
 .carousel {
@@ -153,3 +156,13 @@ body,html{
 
 
 
+
+#Loader{
+	display:block;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translateX(-50%)translateY(-50%);
+	opacity:1;
+	transition: opacity 0.5s ease;
+}

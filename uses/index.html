@@ -32,7 +32,7 @@
 		</header>
 		
 		<!--h1>Uses</h1-->
-		
+		<img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Ajax-loader.gif" alt="Loading" id="Loader" />
 		
 		<div class="container">
 			<div class="carousel">
@@ -90,6 +90,11 @@
 					"-moz-transform": "rotateY(0deg)",
 					"-o-transform": "rotateY(0deg)",
 					"transform": "rotateY(0deg)"});
+				$(".container").css({"-webkit-transform": "scale(1)",
+					"-moz-transform": "scale(1)",
+					"-o-transform": "scale(1)",
+					"transform": "scale(1)"});
+				$("#Loader").css({"opacity": "0"});
 			}
 				
 			function rotate(e){
