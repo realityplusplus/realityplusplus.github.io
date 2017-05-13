@@ -82,14 +82,9 @@ body,html{
 	color: #FFF;
 	border-radius: 10px;
 	
-	display: flex;
-	align-items: center;
-	justify-content:center;
-	
-	background-size:cover;
-	
 	
 	opacity:0.95;
+	perspective:500px;
 }
 
 .a {
@@ -110,36 +105,64 @@ body,html{
 .f {
 	transform: rotateY(300deg) translateZ(80vh);
 }
-/*
-.next, .prev {
-	color: #444;
-	position: absolute;
-	top: 100px;
-	padding: 1em 2em;
-	cursor: pointer;
-	background: #CCC;
-	border-radius: 5px;
-	border-top: 1px solid #FFF;
-	box-shadow: 0 5px 0 #999;
-	transition: box-shadow 0.1s, top 0.1s;
-}
-.next:hover, .prev:hover { color: #000; }
-.next:active, .prev:active {
-	top: 104px;
-	box-shadow: 0 1px 0 #999;
-}
-.next { right: 5em; }
-.prev { left: 5em; }
-*/
+
+
 
 
 .item div{
+	padding:0; margin:0;
+	width:80vh;height:80vh;
+	
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	
+	background-size:cover;
+	
+	filter:brightness(1);
+	transition:transform 1s ease, filter 1s ease;
+}
+.item div div{
+	height:initial;
 	max-width:80vw;max-height:80vh;
 	text-align:left;
 	display:block;
-	padding:0 20px;
+	padding:0;
 	background-color:rgba(66,66,66,0.8);
 }
+
+.item div div h2, .item div div p{
+	padding: 0 20px;
+}
+
+
+
+
+
+
+
+
+.item button{
+	background:rgba(255,255,255,0.1); color:white;
+	border:none;
+	width:100%;
+	padding:10px;
+	transition: background 0.25s ease, color 0.25s ease;
+	cursor:pointer;
+}
+.item button:hover{
+	background:rgba(255, 255, 255, 0.2);
+}
+.item button:active{
+	background:white; color:black;
+}
+
+
+
+
+
+
+
 
 
 
@@ -165,4 +188,42 @@ body,html{
 	transform:translateX(-50%)translateY(-50%);
 	opacity:1;
 	transition: opacity 0.5s ease;
+}
+
+
+
+
+
+
+.ExpandText{
+	position:fixed;
+	top:100vh;
+	left:0;
+	margin:0;
+	color:white;
+	width:100%;height:calc(100vh - 118px);	
+	
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	
+	transition: top 1s ease;
+}
+.ExpandText div{
+	width:60%;
+}
+
+.ExpandText button{
+	background:rgba(255,255,255,0.1); color:white;
+	border:none;
+	width:100%;
+	padding:10px;
+	transition: background 0.25s ease, color 0.25s ease;
+	cursor:pointer;
+}
+.ExpandText button:hover{
+	background:rgba(255, 255, 255, 0.2);
+}
+.ExpandText button:active{
+	background:white; color:black;
 }
