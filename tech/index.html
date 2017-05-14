@@ -60,12 +60,12 @@
 			<p>The frame allows the headset to rest on one's head. It is generally made of a light weight material such as plastic or carbon fiber to allow for a comfortable fitting.</p>
 		</div>
 		
-		<div class="Card" id="Card3" data-6000="opacity:0;" data-6300="opacity:1;" data-7300="opacity:1;" data-7600="opacity:0;">
+		<div class="Card" id="Card3" data-6000="opacity:0;" data-6300="opacity:1;" data-6800="opacity:1;" data-7100="opacity:0;">
 			<h2>Onboard Computer</h2>
 			<p>The onboard computer captures data from the surroundings through a camera or other sensor and processes it to render and display an overlay of information over the real world to create an augmented reality experience. Depending on the nature of the processing, the amount of computational power required varies.</p>
 		</div>
 		
-		<div class="Card" id="Card4" data-8000="opacity:0;" data-8300="opacity:1;" data-8300="opacity:1;" data-8600="opacity:0;">
+		<div class="Card" id="Card4" data-7400="opacity:0;" data-7700="opacity:1;" data-8300="opacity:1;" data-8600="opacity:0;">
 			<h2>Projector + Camera</h2>
 			<p>The projector projects an overlay of information produced by the computer onto the screen to allow the user to see an increased amount of information beyond what is in the real world.</p>
 			<p>The camera is a primary source of input that allows both the computer to understand the world around the user and the user to capture the world on demand without the need to pull out a phone.</p>
@@ -108,11 +108,9 @@
 			
 			// select video element
 			var vid = document.getElementById('v1');
-			//var vid = $('#v0')[0]; // jquery option
 			
 			// refresh video frames on interval for smoother playback
 			setInterval(function(){
-				//vid.currentTime = window.pageYOffset/400;
 				vid.src = "video/Lens_" + pad(Math.round(s.getScrollTop() / 30), 5) + ".png";//window.pageYOffset / 16), 3) + ".png";
 			}, 100);
 			
@@ -137,25 +135,24 @@
 			//IMAGE PRELOADING CRAP
 			//
 			function preloadImages1(){
-				//if(document.getElementById("navLink1").getElementsByTagName("SPAN")[0]){
 					console.log("Begin Preloading Images")
 					actuallyLoadThem1();
-				//} else{
-				///	setTimeout(preloadImages1, 1000);
-				//}
 			}
 			function actuallyLoadThem1(){
 				var images = new Array()
 				console.log("WARNING About to dump massive stuff to console");
 	
-				for(i = 0; i <= 540; i++) {
+				for(i = 0; i <= 346; i++) {
 					images[i] = new Image()
 					images[i].src = "video/Lens_" + pad(i, 5) + ".png";
+					
 					console.log("Loaded " + i + " of 346 images");
 				}
 				
 				var loadBar = document.getElementById("status2");
 				images[1].onload   = function(){loadBar.value = 1;};
+				images[10].onload  = function(){loadBar.value = 10;};
+				images[25].onload  = function(){loadBar.value = 25;};
 				images[50].onload  = function(){loadBar.value = 50;};
 				images[100].onload = function(){loadBar.value = 100;};
 				images[150].onload = function(){loadBar.value = 150;};

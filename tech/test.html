@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Technology - Reality++</title>
+		
+		
+		<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+		<meta name="description" content="An exploration of the technology of augmented reality"/>
+		<meta name="author" content="AK TSA"/>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" type="text/css" href="/uni.css" />
+		<link rel="stylesheet" type="text/css" href="tech.css" />
+		
+		<script src="https://cleantech4us.github.io/JSDep/skrollr.min.js"></script>
+		
+		<style>
+			#v0 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform:translate(-50%,-50%);
+}
+#v1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform:translate(-50%,-50%);
+}
+		</style>
+	</head>
+	<body>
+		<!-- Preloader -->
+		<div id="preloader">
+		    <div id="status">
+				<p>Patience, please<br />This one's big</p>
+				<p>It'll be worth it. We promise.</p>
+				<p><progress id="status2" max="346" value="0"></progress></p>
+				
+				<!--p id="slowConnect" style="position:relative;display:none;z-index:999999;">Slow connection? Try the compressed version <a href="loadtest.html">here</a>.<br />Warning: may be weird and buggy.</p-->
+			</div>
+			
+		</div>
+		
+		
+		
+		<header>
+			
+			<h1><a href="/">Reality++</a></h1>
+			
+			<nav>
+				<ul>
+					<li><a href="/" data-text="Home">Home</a></li><!-- 
+					--><li><a href="/abot" data-text="About">About</a></li><!--
+					--><li><a href="/hist" data-text="History">History</a></li><!--
+					--><li><a href="/uses" data-text="Uses">Uses</a></li><!--
+					--><li><a href="#" class="CurrPage">Technology</a></li><!--
+					--><li><a href="/conc" data-text="Concerns">Concerns</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		
+		
+		
+		<div id="Card1" class="Card" data-0="opacity:1;" data-500="opacity:0;">
+			<h1 style="margin:0;">Technology</h1>
+			<h2 style="margin:0;text-align:center;">Anatomy of an AR Headset</h2>
+		</div>
+		
+		
+		<div class="Card" id="Card2" data-4000="opacity:0;" data-4300="opacity:1;" data-5300="opacity:1;" data-5600="opacity:0;">
+			<h2>Frame</h2>
+			<p>The frame allows the headset to rest on one's head. It is generally made of a light weight material such as plastic or carbon fiber to allow for a comfortable fitting.</p>
+		</div>
+		
+		<div class="Card" id="Card3" data-6000="opacity:0;" data-6300="opacity:1;" data-7300="opacity:1;" data-7600="opacity:0;">
+			<h2>Onboard Computer</h2>
+			<p>The onboard computer captures data from the surroundings through a camera or other sensor and processes it to render and display an overlay of information over the real world to create an augmented reality experience. Depending on the nature of the processing, the amount of computational power required varies.</p>
+		</div>
+		
+		<div class="Card" id="Card4" data-8000="opacity:0;" data-8300="opacity:1;" data-8300="opacity:1;" data-8600="opacity:0;">
+			<h2>Projector + Camera</h2>
+			<p>The projector projects an overlay of information produced by the computer onto the screen to allow the user to see an increased amount of information beyond what is in the real world.</p>
+			<p>The camera is a primary source of input that allows both the computer to understand the world around the user and the user to capture the world on demand without the need to pull out a phone.</p>
+		</div>
+		
+		
+		<div class="Card" id="Card5" data-9000="opacity:0;" data-9300="opacity:1;" data-10300="opacity:1;" data-10600="opacity:0;">
+			<h2>Display</h2>
+			<p>The screen is generally a transparent piece of glass or polycarbonate to allow for the user to be able to see the overlay without obstructing vision of the real world.</p>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		<!--div id="set-height"></div>
+		<p id="time"></p>
+		<img src="video/Lens_00000.png" id="v1" alt="A video of a Google Glass" /-->
+		
+		<div id="set-height"></div>
+		<p id="time"></p>
+		<video id="v0" tabindex="0">
+			<source type="video/mp4" src="Lens.mp4">
+			<p>Sorry, your browser does not support the &lt;video&gt; element.</p>
+		</video>
+		<video id="v1" tabindex="0">
+			<source type="video/mp4" src="LensRev.mp4">
+			<p>Sorry, your browser does not support the &lt;video&gt; element.</p>
+		</video>
+
+		<script>
+			// select video element
+			var vid = document.getElementById('v0');
+			var backVid = document.getElementById("v1");
+			backVid.style.opacity = 0;
+			
+			// pause video on load
+			vid.pause();
+			backVid.pause();
+			
+			
+			var scrollDown = true;
+			var lastPos = window.pageYOffset;
+			
+			// pause video on document scroll (stops autoplay once scroll started)
+			window.onscroll = function(){
+				vid.pause();
+				backVid.pause();
+			};
+			
+			
+			
+			
+			
+			//
+			//	SKROLLR
+			//
+			var s = skrollr.init();
+			
+			
+			
+			//Preloader
+			window.addEventListener('load', eventWindowLoaded, false);
+			function eventWindowLoaded() {
+				console.log("Load Start");
+				playVideo();
+				//vid.addEventListener("progress", progressHandler,false);       
+			}
+			
+			/*progressHandler = function(e) {    
+				if( vid.duration ) {    
+					var percent = (vid.buffered.end(0)/vid.duration) * 100;    
+					var percent2 = (backVid.buffered.end(0) / backVid.duration) * 100;
+					
+					var totale = percent + percent2;
+					
+					console.log( parseInt(totale ));    
+					document.getElementById("status2").value = totale;
+					
+					if( totale >= 80 ) {    
+						console.log("loaded!");   
+						playVideo();
+					}    
+					vid.currentTime++;    
+					backVid.currentTime++;    
+				}    
+			}*/
+			
+			function playVideo() {
+				document.getElementById("preloader").style.display = "none";
+				document.getElementsByTagName("BODY")[0].style.overflow = "visible";
+				console.log("It claims it can play the video");
+				
+				//vid.removeEventListener("progress", progressHandler,false);   
+				
+				
+				// ======================================================
+				// refresh video frames on interval for smoother playback
+				// ======================================================
+				
+				setInterval(function(){
+				
+					//var temp = 0;
+					
+					if(window.pageYOffset == lastPos){
+						return;
+					}
+					
+					if(window.pageYOffset > lastPos && !scrollDown){
+						window.setTimeout(function(){vid.style.opacity = 1;backVid.style.opacity = 0;}, 200);
+						scrollDown = true;
+					} else if(window.pageYOffset < lastPos && scrollDown){
+						window.setTimeout(function(){vid.style.opacity = 0;backVid.style.opacity = 1;}, 200);
+						scrollDown = false;
+					}
+					
+					if(scrollDown){
+						vid.currentTime = window.pageYOffset/900;
+					} else{
+						backVid.currentTime = (10600 - window.pageYOffset) / 900;
+					}
+					
+					
+					lastPos = window.pageYOffset;
+				}, 50);
+			}
+			
+			
+			
+			</script>
+	</body>
+</html>
