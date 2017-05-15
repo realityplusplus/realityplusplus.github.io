@@ -395,3 +395,19 @@ section.Img .BGFixed{
 }
 
 
+
+@media (max-width : 1010px) {/*Fix that dumb nav overlap*/
+	nav{
+		white-space: nowrap;
+	}
+	nav a{
+		padding-left: 5px !important;
+		padding-right:5px !important;
+	}
+	header nav a:hover::after {
+		left: 5.5px;
+	}	
+	header nav a:hover::before {
+		left: 4px;
+	}
+}
