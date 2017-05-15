@@ -260,4 +260,18 @@ html{
 		max-width:100vw;
 		overflow-x:hidden;
 	}
+	body{
+		overflow-y:hidden;
+	}
+}
+@media (max-width:600px){
+	.HomeHead h1{
+		font-size:400%;
+		opacity:1; pointer-events:all;
+	}
+	.HomeHead h2{
+		font-size:100%;
+	}
+	
+	
 }
