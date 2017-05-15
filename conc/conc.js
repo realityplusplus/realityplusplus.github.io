@@ -19,6 +19,6 @@ function setUp(){
 		handler: function(direction) {
 			document.getElementById("pic3").style.transform = "translateY(-50%)rotateX(0deg)rotateY(0deg)";
 		},
-		offset:'60%'
+		offset:'90%'
 	});
 }
