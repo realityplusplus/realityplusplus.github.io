@@ -259,6 +259,7 @@ body,html{
 	}
 	.container{
 		width:100%;
+		transform:scale(1) !important;
 	}
 	.carousel{
 		transform-style:flat;
