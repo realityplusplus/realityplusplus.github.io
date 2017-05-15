@@ -213,7 +213,7 @@ body,html{
 }
 .ExpandText div{
 	width:100%;
-	padding:0 20vw;
+	padding:100px 20vw;
 	max-height:100%;
 	overflow-y:auto;
 }
