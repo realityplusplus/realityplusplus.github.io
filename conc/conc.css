@@ -3,7 +3,9 @@
 }
 
 
-
+body{
+	overflow-x:hidden;
+}
 #pic1{
 	display:block;
 	position:absolute;
