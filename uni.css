@@ -411,3 +411,8 @@ section.Img .BGFixed{
 		left: 4px;
 	}
 }
+@media (max-width:700px){
+	body{
+		font-size:75%;
+	}
+}
