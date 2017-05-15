@@ -213,7 +213,7 @@ body,html{
 }
 .ExpandText div{
 	width:100%;
-	padding:100px 20vw;
+	padding:0 20vw;
 	max-height:100%;
 	overflow-y:auto;
 }
@@ -279,5 +279,13 @@ body,html{
 	}
 	.item h1{
 		background:none !important;
+	}
+	
+	#Loader{
+		display:none;
+	}
+	
+	.ExpandText div button{
+		margin-bottom:100px;
 	}
 }
