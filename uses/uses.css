@@ -249,3 +249,34 @@ body,html{
 	opacity:1;
 	transition-delay:1s;
 }
+
+
+
+
+@media (max-width : 700px) {
+	body{
+		overflow-y:auto;
+	}
+	.container{
+		width:100%;
+	}
+	.carousel{
+		transform-style:flat;
+		transform:none !important;
+		width:100%;
+	}
+	.item{
+		position:static;
+		transform:none !important;
+		width:100%;
+	}
+	.item h1, .item div{
+		width:100%;	
+	}
+	.CarBtn{
+		display:none !important;
+	}
+	.item h1{
+		background:none !important;
+	}
+}
