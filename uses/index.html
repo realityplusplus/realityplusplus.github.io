@@ -83,36 +83,56 @@
 		
 		<div id="ExpandText2" class="ExpandText">
 			<div>
-				<p>Content to be added</p>
+				<p><img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Google_Glass_Main.jpg" alt="Google Glass" style="float:right;max-width:30%;padding:3px;" /> Though not the first device ever envisioned, the Google Glass is often credited with bringing the notion of augmented reality headsets into mainstream notice. First announced via a viral video titled <a href="https://www.youtube.com/watch?v=Vb2uojqKvFM">One Day</a>, the Google Glass quickly attracted widespread attention, both positive and negative. Many were excited at the future promised by the video, where one's headset would allow them to quickly and easily obtain information on the fly without ever needing to look away from what they were doing. Others critiqued possible safety and privacy concerns, citing distractions and the always present camera as potential issues. Though an Explorer edition was eventually released for the general public, the device is now no longer being sold and many have speculated that Google is cutting the project entirely.</p>
+				<p><img src="https://c1.staticflickr.com/8/7367/15867880743_f954b09377_b.jpg" alt="Microsoft Hololens" style="float:left;max-width:40%;padding:3px;" /> First announced in 2015 alongside Windows 10, Microsoft's Hololens headset made headlines for its <a href="https://www.youtube.com/watch?v=xXy7lbs-D48&t=4s">flashy features</a> such as the ability to visualize 3d models in the real world, run programs floating in your vision, or even playing immersive AR games. Unlike the Google Glass, this is not a device designed to be worn at all times through one's day. Rather, it's what Microsoft calls a "holographic computer" - a computer that you strap onto your head when you need to use it, and then remove once you're done. These devices run a modified version of Windows 10 that supports various capabilities needed to run programs in AR. Developer units are currently being sold, with consumer products coming down the road.</p>
 
 				<button onclick="closeBox(2);">Close</button>
 			</div>
 		</div>
 		<div id="ExpandText3" class="ExpandText">
 			<div>
-				<p>Content to be added</p>
-
+				<p>Snapchat has always given users the ability to draw onto the snaps one takes. Though simple, this is <em>technically</em> augmented reality, since the computer imagery (the drawing) is being overlayed onto the video from real life.</p>
+				<p>Since then, Snapchat has significantly expanded their AR offerings. The popular lenses feature uses AR technology and computer vision to detect the presence of a human face in order to add complex visuals and animations onto what the user sees, such as the rainbow barf pictured below.</p>
+				<p>Just a few weeks ago, Snapchat has introduced World Lenses, a feature that allows users to place 3D objects into their view. The app will automatically analyze the surroundings and attempt to pin the object in place as if it were a real object in the world, and not just drawn onto a screen.</p>
+				<img src="https://c1.staticflickr.com/6/5728/20841075594_b91257de92_b.jpg" alt="Snapchat filters" style="max-height:30vh;margin:3px auto;display:block;" />
 				<button onclick="closeBox(3);">Close</button>
 			</div>
 		</div>
 		<div id="ExpandText4" class="ExpandText">
 			<div>
-				<p>Content to be added</p>
+				
+				<p>Gaming is defined by the experience. Thus, since the dawn of video games, the struggle has always been to make gaming as immersive as possible. Augmented reality provides a valuable platform in that it allows the game world to seep into the real one, blurring the line between one's experience in real life and one's experience in a game. This level of immersion creates video games that feel more real than ever, allowing game designers to leverage the technology to craft never before seen experiences.</p>
+				<table style="margin:0 auto;width:100%;">
+					<tr>
+						<td>Pokemon Go</td>
+						<td><img src="https://c1.staticflickr.com/9/8016/28170409310_3a36de4116_b.jpg" alt="Pokemon Go AR" style="max-width:30vw;" /></td>
+					</tr>
+					<tr>
+						<td>Minecraft on Microsoft Hololens</td>
+						<td><img src="https://c1.staticflickr.com/2/1541/25081061586_6428102f6c.jpg" alt="Minecraft on Hololens" style="max-width:30vw;" /></td>
+					</tr>
+					<tr>
+						<td>Project X Ray on Microsoft Hololens</td>
+						<td><img src="http://www.roadtovr.com/wp-content/uploads/2015/10/project-xray-hololens-action.jpg" alt="Project X Ray on Hololens" style="max-width:30vw;" /></td>
+					</tr>
+				</table>
 
 				<button onclick="closeBox(4);">Close</button>
 			</div>
 		</div>
 		<div id="ExpandText5" class="ExpandText">
 			<div>
-				<p>Content to be added</p>
+				<img src="https://c1.staticflickr.com/8/7791/17131947549_67aaeb1931_b.jpg" alt="Google Translate live camera mode" style="max-width:100%;" />
+				<p>It's not perfect, but anyone who has ever traveled before can tell you that it's infinitely better than nothing.</p>
 
 				<button onclick="closeBox(5);">Close</button>
 			</div>
 		</div>
 		<div id="ExpandText6" class="ExpandText">
 			<div>
-				<p>Content to be added</p>
-
+				<img src="http://i.vimeocdn.com/video/593696354_1280x720.jpg" alt="A typical football game" style="display:block;margin:3px auto;max-width:40vw;" />
+				<p>Sportvision is the company behind most of the graphics seen during a typical game on TV. From the iconic <a href="https://www.youtube.com/watch?v=1Oqm6eO6deU">first down line</a> during football matches that first premiered on September 27<sup>th</sup>, 1998, to the wide variety of graphics seen in modern sports broadcasts, all of this is powered with augmented reality technology. Sportvision has since gone on to make visual aids for baseball games, NASCAR races, sailing competitions, and even the Olympic games, while multiple competitors have also sprung up to complete similar tasks. </p>
+				
 				<button onclick="closeBox(6);">Close</button>
 			</div>
 		</div>
@@ -215,6 +235,7 @@
 				el.style.filter = "brightness(0)";
 				//el.parentElement.style.zIndex = 6;
 				document.getElementById("ExpandText" + e).style.top = '118px';
+				document.getElementById("ExpandText" + e).style.opacity = 1;
 				document.getElementById("ExpandText" + e).className = 'ExpandText OpenText';
 				
 				var temp = document.getElementsByClassName("CarBtn");
@@ -230,6 +251,7 @@
 				el.style.filter = "brightness(1)";
 				//el.parentElement.style.zIndex = "";
 				document.getElementById("ExpandText" + e).style.top = '100vh';
+				document.getElementById("ExpandText" + e).style.opacity = 0;
 				document.getElementById("ExpandText" + e).className = 'ExpandText';
 				
 				var temp = document.getElementsByClassName("CarBtn");

@@ -203,15 +203,19 @@ body,html{
 	margin:0;
 	color:white;
 	width:100%;height:calc(100vh - 118px);	
+	opacity:0;
 	
 	display: flex;
 	align-items: center;
 	justify-content:center;
 	
-	transition: top 1s ease;
+	transition: top 1s ease, opacity 1s ease;
 }
 .ExpandText div{
-	width:60%;
+	width:100%;
+	padding:0 20vw;
+	max-height:100%;
+	overflow-y:auto;
 }
 
 .ExpandText button{
