@@ -131,5 +131,7 @@ body{
 	
 	#pic3{
 		right:-10vw;
+		max-height:30vh;
+		max-width:30vw;
 	}
 }
