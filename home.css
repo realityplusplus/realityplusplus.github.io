@@ -115,7 +115,7 @@ html{
 	background-size:cover; background-position:center; background-attachment:fixed;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
-  animation: noise-anim 2s 1 linear alternate-reverse;
+  animation: noise-anim 7s infinite linear alternate-reverse;
 }
 
 @keyframes noise-anim-2 {
@@ -193,7 +193,7 @@ html{
 	background-size:cover; background-position:center; background-attachment:fixed;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
-  animation: noise-anim-2 1.5s 1 linear alternate-reverse;
+  animation: noise-anim-2 10s infinite linear alternate-reverse;
 }
 
 
