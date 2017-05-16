@@ -21,4 +21,28 @@ function setUp(){
 		},
 		offset:'90%'
 	});
+	
+	preloadImages();
 }
+
+
+
+//
+			//IMAGE PRELOADING CRAP
+			//
+			function preloadImages(){
+				console.log("Begin Preloading Images");
+				var images = new Array();
+				for(i = 0; i <= 346; i++) {
+					images[i] = new Image()
+					images[i].src = "/tech/video/Lens_" + pad(i, 5) + ".png";
+					console.log("Loaded " + i + " of 346 images");
+				}
+			}
+			function pad(num, size) {
+				if(num > 346){return "00346";} // Quick Hack - CHANGE TO REFLECT NUM OF FRAMES
+				
+				var s = num+"";
+				while (s.length < size) s = "0" + s;
+				return s;
+			}
