@@ -14,10 +14,11 @@ body{
 
 #v1 {
   position: fixed;
-  top:118px;
+  top:0;
   left: 50%;
-  height: calc(100% - 118px);
+  min-height: 100%;
   transform:translateX(-50%);
+	min-width:100%;
 }
 
 
